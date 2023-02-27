@@ -19,14 +19,16 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.runtime.mutableStateListOf
+import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
 fun WellnessTasksList(
-    list: List<WellnessTask>,
-    onCheckedTask: (WellnessTask, Boolean) -> Unit,
-    onCloseTask: (WellnessTask) -> Unit,
+    list: MutableList<TasksLocal>,
+    wellnessViewModel: WellnessViewModel,
     modifier: Modifier = Modifier
 ) {
+
     LazyColumn(
         modifier = modifier
     ) {
@@ -40,10 +42,10 @@ fun WellnessTasksList(
             key = { task -> task.id }
         ) { task ->
             WellnessTaskItem(
-                taskName = task.label,
+                taskName = task.task!!,
                 checked = task.checked,
-                onCheckedChange = { checked -> onCheckedTask(task, checked) },
-                onClose = { onCloseTask(task) }
+                onCheckedChange = { wellnessViewModel.changeTaskChecked(task, it) },
+                onClose = { wellnessViewModel.remove(task) }
             )
         }
     }

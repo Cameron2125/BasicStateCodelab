@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "236212008987",
+    "project_id": "basicstatelogin",
+    "storage_bucket": "basicstatelogin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236212008987:android:33e0e6d91ba8c86cede0be",
+        "android_client_info": {
+          "package_name": "com.codelabs.state"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "236212008987-ki15i7g7qd8pj9sm78lsbb3ot7p9iv4b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDb1SohGxkBa_sIIIYwpkVmok81HMEKmQw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "236212008987-ki15i7g7qd8pj9sm78lsbb3ot7p9iv4b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
